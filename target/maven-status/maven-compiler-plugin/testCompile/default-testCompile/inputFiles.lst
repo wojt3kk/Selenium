@@ -8,6 +8,7 @@
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/page/objects/CheckoutPage.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/page/objects/ShoppingCartPage.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tests/ShoppingCartTest.java
+/home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tests/PositiveLoginTestsAlt.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/driver/BrowserType.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/page/objects/FooterPage.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/configuration/AppProperties.java
@@ -20,12 +21,14 @@
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tests/FailedLoginTests.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/DropDownTests.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/page/objects/TopMenuPage.java
+/home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/SeleniumGridExampleTest.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/configuration/LocalWebDriverProperties.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/WebElementsTestsOpty.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/FirstAutomatedTest.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/FileUploadTests.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/ExplicitWaitTests2.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/navigation/ApplicationsURLs.java
+/home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/configuration/TestRunProperties.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/configuration/ConfigurationProperties.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/WebElementsTests.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/driver/DriverUtils.java

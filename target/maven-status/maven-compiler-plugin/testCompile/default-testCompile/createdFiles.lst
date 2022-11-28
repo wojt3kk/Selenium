@@ -19,6 +19,7 @@ FluentWaitTestsTwo.class
 page/objects/AngelFishPage.class
 WebElementsTests.class
 tests/ShoppingCartTest.class
+tests/PositiveLoginTestsAlt.class
 HoverTests.class
 GetFakeName.class
 DropDownTests.class
@@ -32,6 +33,7 @@ page/objects/LandingPage.class
 driver/DriverUtils.class
 page/objects/CheckoutPage.class
 tests/PositiveLoginTests.class
+configuration/TestRunProperties.class
 driver/BrowserFactory.class
 Calculator.class
 configuration/LocalWebDriverProperties.class
@@ -40,3 +42,4 @@ SecondAutomatedTest.class
 page/objects/FooterPage.class
 waits/WaitForElement.class
 tests/FailedLoginTests.class
+SeleniumGridExampleTest.class
