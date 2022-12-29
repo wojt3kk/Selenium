@@ -1,3 +1,5 @@
+package tutorial_tests;
+
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;

@@ -1,3 +1,5 @@
+package tutorial_tests;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,14 +16,15 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.assertEquals;
 
-public class DropDownTests {
+public class FileUploadTests {
+
     private WebDriver driver;
 
     @BeforeMethod
     public void beforeTest() {
         System.setProperty("webdriver.chrome.driver", "/home/wkarpowicz/Downloads/chromedriver_linux64/chromedriver");
         driver = new ChromeDriver();
-        driver.navigate().to("http://theinternet.przyklady.javastart.pl/dropdown");
+        driver.navigate().to("http://theinternet.przyklady.javastart.pl/upload");
     }
 
     private void sleep() {
@@ -32,20 +35,22 @@ public class DropDownTests {
         }
     }
     @Test
-    public void dropDownTest(){
-        WebElement dropDown = driver.findElement(By.id("dropdown"));
-        Select dropDownList = new Select(dropDown);
-
-        assertEquals(dropDownList.getFirstSelectedOption().getText(),"Please select an option");
+    public void fileUploadTest(){
+        WebElement upLoad = driver.findElement(By.id("file-upload"));
+        upLoad.sendKeys("/home/wkarpowicz/Downloads/testfile.txt");
         sleep();
 
-        dropDownList.selectByVisibleText("Option 1");
-        assertEquals(dropDownList.getFirstSelectedOption().getText(),"Option 1");
-        sleep();
+        WebElement uploadButton = driver.findElement(By.id("file-submit"));
+        uploadButton.click();
 
-        dropDownList.selectByValue("2");
-        assertEquals(dropDownList.getFirstSelectedOption().getText(),"Option 2");
-        sleep();
+        WebElement uploadedFiles = driver.findElement(By.id("uploaded-files"));
+        String upFile = uploadedFiles.getText();
+        assertEquals(uploadedFiles.getText(),"testfile.txt");
+
+        System.out.println(upFile);
+
+
+//        assertEquals(upLoad.getText(),"testfile.txt");
 
 
 

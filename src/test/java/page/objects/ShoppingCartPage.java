@@ -10,7 +10,7 @@ import waits.WaitForElement;
 
 public class ShoppingCartPage {
 
-    private Logger logger = LogManager.getRootLogger();
+    private Logger logger = LogManager.getLogger(ShoppingCartPage.class);
 
     @FindBy(css = "#Cart a[href*='EST-2']")
     private WebElement findAngelFishInTheCart;

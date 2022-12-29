@@ -1,13 +1,20 @@
+package tutorial_tests;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class WebElementsTests {
+import java.util.List;
+
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
+public class WebElementsTestsOpty {
 
     private WebDriver driver;
 
@@ -15,8 +22,7 @@ public class WebElementsTests {
     public void beforeTest() {
         System.setProperty("webdriver.chrome.driver", "/home/wkarpowicz/Downloads/chromedriver_linux64/chromedriver");
         driver = new ChromeDriver();
-//        driver.navigate().to("http://przyklady.javastart.pl/test/full_form.html");
-        driver.navigate().to("http://przyklady.javastart.pl/test/hover_mouse.html");
+        driver.navigate().to("http://przyklady.javastart.pl/test/full_form.html");
     }
 
 //    @Test
@@ -83,7 +89,7 @@ public class WebElementsTests {
 //        assertFalse(maleRadioButton.isSelected());
 //        sleep();
 //    }
-//
+
 //    @Test
 //    public void checkboxButtonTest(){
 //        WebElement pizzaCheckbox = driver.findElement(By.cssSelector("input[value='pizza'"));
@@ -116,96 +122,6 @@ public class WebElementsTests {
 //        sleep();
 //    }
 
-//    @Test
-//    public void dropDownListingTest() {
-//        WebElement countryWebElement = driver.findElement(By.id("country"));
-//        Select countryDropDown = new Select(countryWebElement);
-//
-//        List<WebElement> options = countryDropDown.getOptions();
-//        List<String> namesOfOptions = new ArrayList<>();
-//
-//        for (WebElement option : options) {
-//            namesOfOptions.add(option.getText());
-//            System.out.println(option.getText());
-//        }
-//    List<String> expectedNamesOfOptions = new ArrayList<>();
-//        expectedNamesOfOptions.add("Germany");
-//        expectedNamesOfOptions.add("Poland");
-//        expectedNamesOfOptions.add("UK");
-//
-//        sleep();
-//
-//        assertEquals(namesOfOptions,expectedNamesOfOptions);
-//
-//
-//     }
-
-//    @Test
-//    public void selectingOptionsFromDropDownTest(){
-//
-//        WebElement countryWebElement = driver.findElement(By.id("country"));
-//        Select countryDropDown = new Select(countryWebElement);
-//        sleep();
-//
-//        countryDropDown.selectByIndex(1);
-//        sleep();
-//
-//        assertEquals(countryDropDown.getFirstSelectedOption().getText(),"Poland");
-//
-//        countryDropDown.selectByValue("de_DE");
-//
-//        sleep();
-//
-//        assertEquals(countryDropDown.getFirstSelectedOption().getText(), "Germany");
-//
-//        sleep();
-//
-//        countryDropDown.selectByVisibleText("UK");
-//        sleep();
-//        assertEquals(countryDropDown.getFirstSelectedOption().getText(),"UK");
-//
-//    }
-
-//    @Test
-//    public void checkIfElementsOnPageTest(){
-//        WebElement usernameField = driver.findElement(By.id("username"));
-//        WebElement passwordField = driver.findElement(By.id("password"));
-//        WebElement emailLabel = driver.findElement(By.cssSelector("span[class='help-block'"));
-//
-//        System.out.println("Is usernameField displayed:" + usernameField.isDisplayed());
-//        System.out.println("Is usernameField enabled:" + usernameField.isEnabled());
-//
-//        System.out.println("Is passwordFiels displayed:" + passwordField.isDisplayed());
-//        System.out.println("Is passwordField enabled:" + passwordField.isEnabled());
-//
-//        System.out.println("Is emailLabel displayed:" + emailLabel.isDisplayed());
-//        System.out.println("Is emailLabel enabled:" + emailLabel.isEnabled());
-//
-//        assertTrue(usernameField.isDisplayed());
-//        assertTrue(passwordField.isDisplayed());
-//        assertTrue(emailLabel.isDisplayed());
-//
-//        assertTrue(usernameField.isEnabled());
-//        assertFalse(passwordField.isEnabled());
-//
-//    }
-
-    @Test
-    public void hoverOverAndClickAndHoldTest() {
-        WebElement smileyicon = driver.findElement(By.id("smiley"));
-//        WebElement smileyicon2 = driver.findElement(By.id("smiley2"));
-
-        Actions action = new Actions(driver);
-        action.moveToElement(smileyicon).click().build().perform();
-        sleep();
-
-        Actions secondAction = new Actions(driver);
-        WebElement smileyicon2 = driver.findElement(By.id("smiley2"));
-        secondAction.moveToElement(smileyicon2).build().perform();
-
-        sleep();
-
-    }
 
     @AfterMethod
     public void afterTest() {

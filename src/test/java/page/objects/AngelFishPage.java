@@ -10,7 +10,7 @@ import waits.WaitForElement;
 
 public class AngelFishPage {
 
-    private Logger logger = LogManager.getRootLogger();
+    private Logger logger = LogManager.getLogger(AngelFishPage.class);
     @FindBy(css = "a.Button[href$='EST-2']")
     private WebElement addAngelFishSmall;
 

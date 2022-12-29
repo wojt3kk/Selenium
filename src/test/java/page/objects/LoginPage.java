@@ -1,17 +1,18 @@
 package page.objects;
 
+import driver.DriverManager;
+import io.qameta.allure.Step;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import driver.DriverManager;
 import waits.WaitForElement;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 
 public class LoginPage {
 
-    private Logger logger = LogManager.getRootLogger();
+    private Logger logger = LogManager.getLogger(LoginPage.class);
 
     @FindBy(name = "username")
     private WebElement usernameField;
@@ -31,7 +32,7 @@ public class LoginPage {
     public LoginPage(){
         PageFactory.initElements(DriverManager.getWebDriver(), this);
     }
-
+    @Step("Type into User Name Field {username}")
     public LoginPage typeIntoUserNameField(String username){
 //        WebElement usernameField = driver.findElement(By.name("username")); --- wyniesione do @FindBy
 //        usernameField.clear();
@@ -40,7 +41,7 @@ public class LoginPage {
         logger.info("Typed into User Name Field: {}", username);
         return this;
     }
-
+    @Step("Type into Password Field {password}")
     public LoginPage  typeIntoPasswordField(String password){
 //        WebElement passwordField = driver.findElement(By.name("password"));  --- wyniesione do @FindBy
         passwordField.clear();
@@ -48,13 +49,14 @@ public class LoginPage {
         logger.info("Typed into Password Field: {}", password);
         return this;
     }
-
+    @Step("Click on Login Button")
     public FooterPage clickOnLoginButton() {
 //        WebElement signOnButton = driver.findElement(By.name("signon"));  --- wyniesione do @FindBy
         signOnButton.click();
         logger.info("Clicked on Login Button");
         return new FooterPage();
     }
+    @Step("Getting warning message from Login Page")
     public String getWarningMessage(){
 //        WebElement messageLabel = driver.findElement(By.cssSelector("#Content ul[class='messages'] li"));  --- wyniesione do @FindBy
         WaitForElement.waitUntilElementIsVisible(messageLabel);

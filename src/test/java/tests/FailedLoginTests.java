@@ -1,11 +1,11 @@
 package tests;
 
 import driver.DriverUtils;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.annotations.Test;
-import page.objects.LandingPage;
 import page.objects.LoginPage;
-import page.objects.TopMenuPage;
-
 
 import static navigation.ApplicationsURLs.LOGIN_URL;
 import static org.testng.AssertJUnit.assertEquals;
@@ -21,7 +21,10 @@ public class FailedLoginTests extends TestBase {
 //            driver.navigate().to("http://przyklady.javastart.pl/jpetstore/");
 //    } ---Przeniesione do TestBase
 
+    @Severity(SeverityLevel.NORMAL)
     @Test
+    @Description("The goal of this test is to log in using not proper username and password" +
+            " and check if warning message Invalid username or password is displayed")
         public void asUserTryToLogInWithIncorrectLoginAndPassword(){
         DriverUtils.navigateToPage(LOGIN_URL);
 

@@ -10,7 +10,7 @@
     <!--Dodatkowa nowa sekcja properties. Zawiera ona wersje dla biblioteki aspectjweaver-->
     <!--Sekcja properties definiuje parametry, które są używane w wielu miejsach np. ${aspectj.version}-->
     <properties>
-        <aspectj.version>1.9.5</aspectj.version>
+        <aspectj.version>1.9.19</aspectj.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
@@ -20,12 +20,12 @@
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
-            <version>2.3.0</version>
+            <version>2.4.0-b180830.0359</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.25</version>
+            <version>2.0.5</version>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
@@ -36,23 +36,28 @@
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
-            <version>2.16.0</version>
+            <version>2.20.0</version>
         </dependency>
         <!--Stare zależności projektowe takie jak Selenium czy TestNG-->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.0.0</version>
+            <version>4.7.1</version>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.4.0</version>
+            <version>7.7.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
-            <version>2.14.0</version>
+            <version>2.19.0</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
         </dependency>
     </dependencies>
 
