@@ -1,6 +1,7 @@
 package page.objects;
 
 import driver.DriverManager;
+import generic.assertions.AssertWebElement;
 import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -56,19 +57,27 @@ public class LoginPage {
         logger.info("Clicked on Login Button");
         return new FooterPage();
     }
-    @Step("Getting warning message from Login Page")
-    public String getWarningMessage(){
-//        WebElement messageLabel = driver.findElement(By.cssSelector("#Content ul[class='messages'] li"));  --- wyniesione do @FindBy
-        WaitForElement.waitUntilElementIsVisible(messageLabel);
-        String warningText = messageLabel.getText();
-        logger.info("Returned warning message was: {}", warningText);
-        return warningText;
-    }
 
-    public FishPage clickOnFishImageButton(){
-        WaitForElement.waitUntilElementIsVisible(btnFishLink);
-        btnFishLink.click();
-        logger.info("Clicked on fish image");
-        return new FishPage();
+    @Step("Assert that warning message {warningMessage} is displayed")
+    public LoginPage assertThatWarningIsDisplayed(String warningMessage) {
+        logger.info("Checking if warning message {} is displayed", warningMessage);
+        WaitForElement.waitUntilElementIsVisible(messageLabel);
+        AssertWebElement.assertThat(messageLabel).isDisplayed().hasText(warningMessage);
+        return this;
     }
+//    @Step("Getting warning message from Login Page")
+//    public String getWarningMessage(){
+////        WebElement messageLabel = driver.findElement(By.cssSelector("#Content ul[class='messages'] li"));  --- wyniesione do @FindBy
+//        WaitForElement.waitUntilElementIsVisible(messageLabel);
+//        String warningText = messageLabel.getText();
+//        logger.info("Returned warning message was: {}", warningText);
+//        return warningText;
+//    }
+//
+//    public FishPage clickOnFishImageButton(){
+//        WaitForElement.waitUntilElementIsVisible(btnFishLink);
+//        btnFishLink.click();
+//        logger.info("Clicked on fish image");
+//        return new FishPage();
+//    }
 }

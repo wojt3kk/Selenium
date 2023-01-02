@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import page.objects.LoginPage;
 
 import static navigation.ApplicationsURLs.LOGIN_URL;
-import static org.testng.Assert.assertTrue;
 
 public class PositiveLoginTests extends TestBase {
 
@@ -20,13 +19,15 @@ public class PositiveLoginTests extends TestBase {
         DriverUtils.navigateToPage(LOGIN_URL);
 
         LoginPage loginPage = new LoginPage();
-        boolean isBannerAfterLoginDisplayed = loginPage
+//        boolean isBannerAfterLoginDisplayed =
+        loginPage
                 .typeIntoUserNameField("j2ee")
                 .typeIntoPasswordField("j2ee")
                 .clickOnLoginButton()
-                .isBannerAfterLoginDisplayed();
-
-        assertTrue(isBannerAfterLoginDisplayed);
+                .assertThatDogBannerIsDisplayed();
+//                .isBannerAfterLoginDisplayed();
+//
+//        assertTrue(isBannerAfterLoginDisplayed);
     }
 
 }

@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import page.objects.LoginPage;
 
 import static navigation.ApplicationsURLs.LOGIN_URL;
-import static org.testng.AssertJUnit.assertEquals;
 
 public class FailedLoginTests extends TestBase {
 //    private WebDriver driver;
@@ -25,14 +24,17 @@ public class FailedLoginTests extends TestBase {
     @Test
     @Description("The goal of this test is to log in using not proper username and password" +
             " and check if warning message Invalid username or password is displayed")
-        public void asUserTryToLogInWithIncorrectLoginAndPassword(){
+        public void asUserTryToLogInWithIncorrectLoginAndPassword() {
         DriverUtils.navigateToPage(LOGIN_URL);
 
-        LoginPage loginPage= new LoginPage();
+        LoginPage loginPage = new LoginPage();
         loginPage
                 .typeIntoUserNameField("NotExistingLogin")
                 .typeIntoPasswordField("NotProperPassword")
                 .clickOnLoginButton();
+        loginPage
+                .assertThatWarningIsDisplayed("Invalid username or password. Signon failed.");
+    }
 
         //kliknięcie w link "enter the store" ---- przeniesione do klasy page.objects.LandingPage
         //WebElement enterStoreLink = driver.findElement(By.cssSelector("#Content a"));
@@ -64,10 +66,10 @@ public class FailedLoginTests extends TestBase {
 //        loginPage.typeIntoUserNameField("NotExistingLogin");
 //        loginPage.typeIntoPasswordField("NotProperPassword");
 //        loginPage.clickOnLoginButton();
-        String warningMessage = loginPage.getWarningMessage();
-
-        assertEquals(warningMessage, "Invalid username or password. Signon failed.");
-    }
+//        String warningMessage = loginPage.getWarningMessage();
+//
+//        assertEquals(warningMessage, "Invalid username or password. Signon failed.");
+//    }
 //    @AfterMethod
 //    public void afterTest(){
 //        driver.close();
