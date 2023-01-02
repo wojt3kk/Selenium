@@ -1,5 +1,6 @@
 package driver;
 
+import driver.listeners.WebDriverEventListenerRegistrar;
 import org.openqa.selenium.WebDriver;
 
 import static configuration.TestRunProperties.getBrowserToRun;
@@ -35,6 +36,8 @@ public class DriverManager {
                 browser = new BrowserFactory(browserType, getIsRemoteRun()).getBrowser();
 
             }
+            //Rejestracja obiektu WebDrivera
+            browser = WebDriverEventListenerRegistrar.registerWebDriverEventListener(browser);
             //Dodanie do puli instancji ThreadLocal za pomocą metody set() instancji klasy BrowserType
             browserTypeThreadLocal.set(browserType);
 
