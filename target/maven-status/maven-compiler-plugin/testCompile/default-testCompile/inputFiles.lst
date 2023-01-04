@@ -1,6 +1,7 @@
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/page/objects/LoginPage.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tutorial_tests/FluentWaitTests.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/configuration/PropertiesLoader.java
+/home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/generic/assertions/AssertWebElement.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tutorial_tests/ExplicitWaitTests.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tests/PositiveLoginTests.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/waits/WaitForElement.java
@@ -9,7 +10,6 @@
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/page/objects/ShoppingCartPage.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tests/ShoppingCartTest.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tutorial_tests/DropDownTests.java
-/home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tests/PositiveLoginTestsAlt.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tutorial_tests/FirstAutomatedTest.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/driver/BrowserType.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/page/objects/FooterPage.java
@@ -17,10 +17,13 @@
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tutorial_tests/Calculator.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tutorial_tests/WebElementsTestsOpty.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tutorial_tests/FluentWaitTestsTwo.java
+/home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/driver/listeners/WebDriverEventListenerRegistrar.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/driver/DriverManager.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/page/objects/AngelFishPage.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tutorial_tests/CheckBoxesTests.java
+/home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/driver/listeners/DriverEventListener.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tests/FailedLoginTests.java
+/home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/utils/testng/listeners/TestListener.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tutorial_tests/FluentWaitTest.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tutorial_tests/FluentWaitTestV2.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/page/objects/TopMenuPage.java
@@ -41,4 +44,5 @@
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/driver/BrowserFactory.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tests/TestBase.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/page/objects/FishPage.java
+/home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/utils/ScreenShotMaker.java
 /home/wkarpowicz/Documents/Automatyzacja/WebDriverManager-Maven/src/test/java/tutorial_tests/CalculatorTest.java
