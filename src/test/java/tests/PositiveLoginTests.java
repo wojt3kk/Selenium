@@ -21,7 +21,7 @@ public class PositiveLoginTests extends TestBase {
         LoginPage loginPage = new LoginPage();
 //        boolean isBannerAfterLoginDisplayed =
         loginPage
-                .typeIntoUserNameField("j2ee")
+                .typeIntoUserNameField("j2eea")
                 .typeIntoPasswordField("j2ee")
                 .clickOnLoginButton()
                 .assertThatDogBannerIsDisplayed();

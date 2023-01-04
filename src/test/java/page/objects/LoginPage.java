@@ -3,17 +3,15 @@ package page.objects;
 import driver.DriverManager;
 import generic.assertions.AssertWebElement;
 import io.qameta.allure.Step;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import waits.WaitForElement;
 
 
-public class LoginPage {
+public class LoginPage extends BasePage {
 
-    private Logger logger = LogManager.getLogger(LoginPage.class);
+//    private Logger logger = LogManager.getLogger(LoginPage.class); <--- przeniesione do BasePage (parent)
 
     @FindBy(name = "username")
     private WebElement usernameField;
@@ -39,7 +37,7 @@ public class LoginPage {
 //        usernameField.clear();
         WaitForElement.waitUntilElementIsVisible(usernameField);
         usernameField.sendKeys(username);
-        logger.info("Typed into User Name Field: {}", username);
+        log().info("Typed into User Name Field: {}", username);
         return this;
     }
     @Step("Type into Password Field {password}")
@@ -47,20 +45,20 @@ public class LoginPage {
 //        WebElement passwordField = driver.findElement(By.name("password"));  --- wyniesione do @FindBy
         passwordField.clear();
         passwordField.sendKeys(password);
-        logger.info("Typed into Password Field: {}", password);
+        log().info("Typed into Password Field: {}", password);
         return this;
     }
     @Step("Click on Login Button")
     public FooterPage clickOnLoginButton() {
 //        WebElement signOnButton = driver.findElement(By.name("signon"));  --- wyniesione do @FindBy
         signOnButton.click();
-        logger.info("Clicked on Login Button");
+        log().info("Clicked on Login Button");
         return new FooterPage();
     }
 
     @Step("Assert that warning message {warningMessage} is displayed")
     public LoginPage assertThatWarningIsDisplayed(String warningMessage) {
-        logger.info("Checking if warning message {} is displayed", warningMessage);
+        log().info("Checking if warning message {} is displayed", warningMessage);
         WaitForElement.waitUntilElementIsVisible(messageLabel);
         AssertWebElement.assertThat(messageLabel).isDisplayed().hasText(warningMessage);
         return this;
