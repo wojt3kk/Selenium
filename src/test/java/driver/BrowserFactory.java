@@ -71,6 +71,8 @@ public class BrowserFactory {
             switch (browserType){
                 case CHROME:
                     System.setProperty("webdriver.chrome.driver", LocalWebDriverProperties.getChromeWebDriverLocation());
+                    ChromeOptions chromeOptions = new ChromeOptions();
+                    chromeOptions.addArguments("--remote-allow-origins=*");
                     return new ChromeDriver();
                 case FIREFOX:
                     System.setProperty("webdriver.gecko.driver", LocalWebDriverProperties.getFirefoxWebDriverLocation());
