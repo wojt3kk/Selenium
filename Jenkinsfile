@@ -6,6 +6,12 @@ pipeline {
                 sh 'mvn clean install -DskipTests'
             }
         }
+                }
+        stage('Run selenium grid') {
+            steps {
+                sh 'docker-compose up -d' // Uruchiomienie Docker Selenium
+            }
+        }
         stage('Execute test') {
             steps {
                 sh 'mvn test'
