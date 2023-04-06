@@ -1,9 +1,11 @@
 package tutorial_tests;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,7 +20,9 @@ private WebDriver driver;
     @BeforeMethod
     public void beforeTest() {
         System.setProperty("webdriver.chrome.driver", "/home/wkarpowicz/Downloads/chromedriver_linux64/chromedriver");
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        driver = new ChromeDriver(options);
         driver.navigate().to("http://theinternet.przyklady.javastart.pl/checkboxes");
     }
 
@@ -35,6 +39,8 @@ private WebDriver driver;
         WebElement firstCheckbox = driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[1]"));
         sleep();
         WebElement secondCheckbox = driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[2]"));
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        javascriptExecutor.executeScript("arguments[0].click();", firstCheckbox);
 
         assertFalse(firstCheckbox.isSelected());
         sleep();
